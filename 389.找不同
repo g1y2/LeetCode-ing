@@ -1,0 +1,13 @@
+class Solution {
+public:
+    char findTheDifference(string s, string t) {
+        int len1 = s.size();
+        int len2 = t.size();
+        int sum = (int)t[len2 - 1];
+        for (int i = 0; i < len1; i++) {
+            sum += (int)t[i];
+            sum -= (int)s[i];
+        }
+        return (char)sum;
+    }
+};
